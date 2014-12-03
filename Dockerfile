@@ -25,3 +25,6 @@ COPY supervisord.conf /etc/supervisor/supervisord.conf
 
 # Supervisord web interface -------
 EXPOSE 9999
+
+
+CMD ["supervisord", "-c", "/etc/supervisor/supervisord.conf", "-n"]
