@@ -15,6 +15,7 @@ RUN apt-get update \
 						unzip \
 						curl \
 						git \
+						ca-certificates \
 						pwgen \
 						wget \
 	&& rm -rf /var/lib/apt/lists/*
