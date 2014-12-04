@@ -14,7 +14,7 @@ RUN apt-get update \
 						unrar \
 						unzip \
 						curl \
-						nano \
+						git \
 						pwgen \
 						wget \
 	&& rm -rf /var/lib/apt/lists/*
