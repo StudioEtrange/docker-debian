@@ -16,8 +16,9 @@ for running debian wheezy :
 
 ## Version and Tag
 
-* Each tag is a different version of debian
-* latest is the latest stable version of debian
+* docker-tag:latest ==> latest stable version of debian through this repository
+* github-branch:master ==> work in progress based on latest stable debian version available through this repository
+* docker-tag:ver connected to github-branch:ver ==> debian version ver
 
 ## Instruction 
 
@@ -39,4 +40,4 @@ for running debian wheezy :
 
 ### Supervisor
 
-	Go to http://localhost:SUPERVISOR_HTTP_WEB/
+	http://localhost:SUPERVISOR_HTTP_WEB/
