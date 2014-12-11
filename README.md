@@ -18,7 +18,7 @@ for running debian wheezy :
 
 * docker-tag:latest ==> latest stable version of debian through this repository
 * github-branch:master ==> work in progress based on latest stable debian version available through this repository
-* docker-tag:ver connected to github-branch:ver==> debian version ver
+* docker-tag:ver connected to github-branch:ver ==> debian version ver
 
 
 ## Instruction 
