@@ -1,10 +1,10 @@
-FROM debian:wheezy
+FROM debian:latest
 MAINTAINER StudioEtrange <nomorgan@gmail.com>
 
 # Debian package & stuff -------------
 
-RUN echo "deb http://http.debian.net/debian wheezy non-free" >> /etc/apt/sources.list \
-	&& echo "deb http://http.debian.net/debian wheezy-updates non-free" >> /etc/apt/sources.list
+RUN echo "deb http://http.debian.net/debian stable non-free" >> /etc/apt/sources.list \
+	&& echo "deb http://http.debian.net/debian stable-updates non-free" >> /etc/apt/sources.list
 
 # DEBIAN packages
 RUN apt-get update \
@@ -15,9 +15,10 @@ RUN apt-get update \
 						unzip \
 						curl \
 						git \
-						ca-certificates \
+ 						ca-certificates \
 						pwgen \
 						wget \
+						nano \
 	&& rm -rf /var/lib/apt/lists/*
 
 
