@@ -18,6 +18,7 @@ RUN apt-get update \
  						ca-certificates \
 						pwgen \
 						wget \
+						nano \
 	&& rm -rf /var/lib/apt/lists/*
 
 
