@@ -1,4 +1,4 @@
-FROM debian:squeeze
+FROM debian:sid
 MAINTAINER StudioEtrange <nomorgan@gmail.com>
 
 # Debian package & stuff -------------
