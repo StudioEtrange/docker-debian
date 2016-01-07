@@ -3,8 +3,9 @@ MAINTAINER StudioEtrange <nomorgan@gmail.com>
 
 # Debian package & stuff -------------
 
-RUN echo "deb http://http.debian.net/debian stable non-free" >> /etc/apt/sources.list \
-	&& echo "deb http://http.debian.net/debian stable-updates non-free" >> /etc/apt/sources.list
+RUN echo "deb http://httpredir.debian.org/debian wheezy main non-free" >> /etc/apt/sources.list \
+	&& echo "deb http://httpredir.debian.org/debian-updates wheezy-updates main non-free" >> /etc/apt/sources.list
+	&& echo "deb http://httpredir.debian.org/debian-backports wheezy-backports main non-free" >> /etc/apt/sources.list
 
 # DEBIAN packages
 RUN apt-get update \

@@ -4,8 +4,9 @@ _CURRENT_FILE_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd "$_CURRENT_FILE_DIR"
 
 # MODIFY THIS TO SETUP AVAILABLE DEBIAN VERSION
-DEBIAN_VERSION_LIST="wheezy jessie stretch sid"
+DEBIAN_VERSION_LIST="stable wheezy jessie stretch sid"
 
+# debian stable will be "latest" as docker-tag
 
 
 # SPECIFIC FUNCTIONS ----------------------------
@@ -15,6 +16,11 @@ function update_dockerfile() {
 
 	sed -i .bak -e "s,ENV DEBIAN_VERSION.*,ENV DEBIAN_VERSION $version," "$path"
 	sed -i .bak -e "s/^FROM debian:.*/FROM debian:"$version"/" "$path"
+
+	sed -i .bak -e "s,http://httpredir.debian.org/debian .*main non-free,http://httpredir.debian.org/debian "$version" main non-free,"  "$path"
+	sed -i .bak -e "s,http://httpredir.debian.org/debian-updates.*main non-free,http://httpredir.debian.org/debian-updates "$version"-updates main non-free,"  "$path"
+	sed -i .bak -e "s,http://httpredir.debian.org/debian-backports.*main non-free,http://httpredir.debian.org/debian-backports "$version"-backports main non-free,"  "$path"
+
 	rm -f "$path".bak
 }
 
@@ -43,7 +49,7 @@ function update_readme() {
 echo
 echo "******** UPDATE LAST ********"
 # Update last release
-last_release="latest"
+last_release="stable"
 
 version_name="$last_release"
 version_number="$version_name"
