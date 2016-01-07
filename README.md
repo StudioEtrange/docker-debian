@@ -15,7 +15,7 @@ to run latest debian version :
 
 Available tag for studioetrange/docker-debian:__TAG__
 
-	latest, squeeze, 6, wheezy, 7, jessie, 8
+	latest, squeeze, wheezy, jessie
 
 The docker-debian:latest tag will always point to the latest stable release of debian
 

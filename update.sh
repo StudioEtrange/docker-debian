@@ -4,7 +4,7 @@ _CURRENT_FILE_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd "$_CURRENT_FILE_DIR"
 
 # MODIFY THIS TO SETUP AVAILABLE DEBIAN VERSION
-DEBIAN_VERSION_LIST="squeeze 6 wheezy 7 jessie 8"
+DEBIAN_VERSION_LIST="squeeze wheezy jessie "
 
 
 
